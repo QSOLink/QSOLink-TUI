@@ -3,11 +3,21 @@ package main
 import (
   "fmt"
   "log"
-  "net/http"
+  "os"
+
+	"github.com/joho/godotenv"
 )
 
 func main() {
-  fmt.println("Hello World")
+	// init
+	err := godotenv.Load()
+	  if err != nil {
+    log.Fatal("Error loading .env file")
+  }
+
+	qsolinkserver := os.Getenv("QSOLINK_SERVER")
+
+  fmt.Println(qsolinkserver)
 }
 
 
