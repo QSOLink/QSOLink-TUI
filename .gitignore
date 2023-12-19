@@ -22,3 +22,9 @@ go.work
 
 # Ignore .env
 .env
+
+# Ignore jetbrains IDE project files
+*.iws
+workspace.xml
+tasks.xml
+.idea
