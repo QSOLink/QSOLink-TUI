@@ -25,7 +25,17 @@ func getQSOs(apiURL string) {
 	}
 
 	for _, contact := range contacts {
-		fmt.Println(contact.ID, contact.Callsign, contact.QslR, contact.QslS)
+		fmt.Println(contact.ID, contact.Callsign, contact.Band, contact.Mode, contact.Name, contact.DateOn)
 	}
 
+}
+
+func addQSO(apiURL string) {
+	// this function should add a QSO to the API using the POST method.
+	// Required fields from the Contact struct are:
+	// Callsign, Band, Mode, DateOn, TimeOn
+	// the DateOn should be today's date UTC in the format YYYY-MM-DD
+	// the TimeOn should be the time the QSO was received in the format HH:MM:SS.SSS
+	// the rest of the fields are optional and will be set to empty strings if not provided
+	// except for qsls and qslr which should be set to false
 }
